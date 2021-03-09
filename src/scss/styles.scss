@@ -24,6 +24,10 @@ body {
   }
   .menu {
     grid-column-start: -2;
+    &:hover {
+      background-color: $bg;
+      color: white;
+    }
   }
   .center-image {
     grid-column: 2 /-2;
@@ -56,5 +60,20 @@ body {
     grid-column-start: 2;
     white-space: nowrap;
     overflow: hidden;
+    span {
+      animation: scrollText 5s linear infinite;
+    }
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX((0px));
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
